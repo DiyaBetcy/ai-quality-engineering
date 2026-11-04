@@ -84,3 +84,23 @@ def test_delete_post():
     response = delete_post(1)
 
     assert response.status_code == 200
+
+def test_get_post_with_invalid_id():
+    response = get_post(-1)
+
+    assert response.status_code == 404
+
+def test_create_post_with_missing_fields():
+    response = create_post("", "", 1)
+
+    assert response.status_code == 201
+
+def test_create_post_with_invalid_user_id():
+    response = create_post(
+        "Test title",
+        "Test body",
+        "invalid"
+    )
+
+    print(response.status_code)
+    print(response.json())
