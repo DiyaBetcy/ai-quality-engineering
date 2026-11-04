@@ -40,3 +40,35 @@ def test_multiplication_with_zero():
 
 def test_division_with_decimal_result():
     assert divide(5, 2) == 2.5
+
+def test_division_by_zero():
+    with pytest.raises(ZeroDivisionError):
+        divide(10, 0)
+
+def test_division_by_numberstring():
+    with pytest.raises(TypeError):
+        divide("10", 2)
+
+def test_addition_with_string():
+    with pytest.raises(TypeError):
+        add("Hello", 5)
+
+
+def test_subtraction_with_string():
+    with pytest.raises(TypeError):
+        subtract(10, "5")
+
+
+def test_multiplication_with_string():
+    with pytest.raises(TypeError):
+        multiply(10, "5")
+
+
+def test_division_with_string():
+    with pytest.raises(TypeError):
+        divide("10", 2)
+
+
+def test_addition_with_boolean():
+    with pytest.raises(TypeError):
+        add(True, 5)
