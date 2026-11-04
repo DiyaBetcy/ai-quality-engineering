@@ -39,3 +39,17 @@
 - Handled connection errors and request timeouts.
 - Generated HTML API test reports.
 - Final result: 13 passed, 0 failed.
+
+## Day 5 – Advanced API Testing
+
+- Practised query parameters in API requests.
+- Learned parameterized testing using pytest.mark.parametrize.
+- Tested multiple valid and invalid inputs.
+- Understood positive and negative API testing.
+- Learned HTTP request headers: Accept, Content-Type and Authorization.
+- Compared JSON and form-encoded payloads using json= and data=.
+- Practised Basic Authentication using HTTPBasicAuth.
+- Automated valid and invalid authentication tests.
+- Learned HTTP 401 and HTTP 500 responses.
+- Practised handling timeout and connection exceptions.
+- Used try-except for API error handling.
