@@ -16,3 +16,13 @@
 - Practised Equivalence Partitioning (EP).
 - Generated an HTML test execution report using pytest-html.
 - Final test result: 20 passed.
+
+## Day 3 – Python Automation Testing
+
+- Practised Pytest assertions.
+- Tested expected exceptions using pytest.raises().
+- Performed positive and negative testing.
+- Tested different input data types.
+- Implemented reusable input validation.
+- Practised defect injection and regression testing.
+- Final test result: 35 passed.
