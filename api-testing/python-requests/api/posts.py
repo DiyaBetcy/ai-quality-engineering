@@ -5,7 +5,11 @@ BASE_URL = "https://jsonplaceholder.typicode.com"
 
 def get_post(post_id):
     url = f"{BASE_URL}/posts/{post_id}"
-    response = requests.get(url, timeout=10)
+    
+    headers = {
+        "Accept": "application/json"
+    }
+    response = requests.get(url, headers=headers, timeout=10)
     return response
 
 def create_post(title, body, user_id):
@@ -49,5 +53,17 @@ def delete_post(post_id):
     url = f"{BASE_URL}/posts/{post_id}"
 
     response = requests.delete(url, timeout=10)
+
+    return response
+
+def get_posts_by_user(user_id):
+    url = f"{BASE_URL}/posts"
+
+    params = {
+        "userId": user_id
+    }
+  
+
+    response = requests.get(url, params=params, timeout=10)
 
     return response

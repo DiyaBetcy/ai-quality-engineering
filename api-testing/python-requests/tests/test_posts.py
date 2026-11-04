@@ -5,7 +5,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from api.posts import get_post, create_post, update_post, patch_post, delete_post
+from api.posts import get_post, create_post, update_post, patch_post, delete_post, get_posts_by_user
 
 
 def test_get_post_status_code():
@@ -124,3 +124,32 @@ def test_get_post_response_details():
 
     # Validate response time
     assert response.elapsed.total_seconds() < 10
+
+@pytest.mark.parametrize("user_id", [1, 2, 3, 4])
+def test_get_posts_by_user(user_id):
+    response = get_posts_by_user(user_id)
+
+    assert response.status_code == 200
+
+    data = response.json()
+
+    assert len(data) > 0
+
+    for post in data:
+        assert post["userId"] == user_id
+
+@pytest.mark.parametrize("user_id", [-1, 0, 999999])
+def test_get_posts_with_invalid_user_id(user_id):
+    response = get_posts_by_user(user_id)
+
+    assert response.status_code == 200
+
+    data = response.json()
+
+    assert len(data) == 0
+
+def test_get_post_content_type():
+    response = get_post(1)
+
+    assert response.status_code == 200
+    assert "application/json" in response.headers["Content-Type"]
