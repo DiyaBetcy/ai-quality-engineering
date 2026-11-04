@@ -102,5 +102,25 @@ def test_create_post_with_invalid_user_id():
         "invalid"
     )
 
-    print(response.status_code)
-    print(response.json())
+    print("Status:", response.status_code)
+    print("Response:", response.json())
+
+    assert response.status_code == 201
+
+def test_get_post_response_details():
+    response = get_post(1)
+
+    assert response.status_code == 200
+
+    # Validate content type
+    assert "application/json" in response.headers["Content-Type"]
+
+    # Validate response structure
+    data = response.json()
+
+    assert isinstance(data, dict)
+    assert isinstance(data["id"], int)
+    assert isinstance(data["title"], str)
+
+    # Validate response time
+    assert response.elapsed.total_seconds() < 10
