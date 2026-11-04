@@ -44,3 +44,10 @@ def patch_post(post_id, title):
 
     response = requests.patch(url, json=payload, timeout=10)
     return response
+
+def delete_post(post_id):
+    url = f"{BASE_URL}/posts/{post_id}"
+
+    response = requests.delete(url, timeout=10)
+
+    return response
