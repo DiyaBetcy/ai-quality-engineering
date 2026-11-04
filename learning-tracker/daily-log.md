@@ -26,3 +26,16 @@
 - Implemented reusable input validation.
 - Practised defect injection and regression testing.
 - Final test result: 35 passed.
+
+## Day 4 – API Testing Fundamentals
+
+- Learned API and REST API fundamentals.
+- Practised HTTP methods: GET, POST, PUT, PATCH and DELETE.
+- Understood HTTP status codes.
+- Used Python Requests to send API requests.
+- Validated JSON response data and headers.
+- Practised positive and negative API testing.
+- Learned Pytest fixtures in API automation.
+- Handled connection errors and request timeouts.
+- Generated HTML API test reports.
+- Final result: 13 passed, 0 failed.
