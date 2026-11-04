@@ -5,7 +5,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from api.posts import get_post
+from api.posts import get_post, create_post
 
 
 def test_get_post_status_code():
@@ -40,3 +40,18 @@ def test_get_invalid_post():
     response = get_post(999999)
 
     assert response.status_code == 404
+
+def test_create_post():
+    response = create_post(
+        "Learning API Testing",
+        "Practising POST requests using Python",
+        1
+    )
+
+    data = response.json()
+
+    assert response.status_code == 201
+    assert data["title"] == "Learning API Testing"
+    assert data["body"] == "Practising POST requests using Python"
+    assert data["userId"] == 1
+    assert "id" in data
