@@ -1,22 +1,26 @@
 import sys
 from pathlib import Path
+import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from app.login import validate_login
 
 
-def test_valid_login():
-    assert validate_login("admin", "12345") is True
-
-
-def test_invalid_password():
-    assert validate_login("admin", "wrong") is False
-
-
-def test_empty_username():
-    assert validate_login("", "12345") is False
-
-
-def test_empty_password():
-    assert validate_login("admin", "") is False
+@pytest.mark.parametrize(
+    "username, password, expected",
+    [
+        ("admin", "12345", True),
+        ("admin", "wrong", False),
+        ("user", "12345", False),
+        ("", "12345", False),
+        ("admin", "", False),
+        ("", "", False),
+        ("guest", "guest123", False),
+        ("ADMIN", "12345", False),
+        ("Admin","12345",False),
+        ("aDMIN","12345", False)
+    ]
+)
+def test_login_scenarios(username, password, expected):
+    assert validate_login(username, password) is expected
