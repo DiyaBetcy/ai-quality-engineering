@@ -5,7 +5,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from api.posts import get_post, create_post
+from api.posts import get_post, create_post, update_post, patch_post
 
 
 def test_get_post_status_code():
@@ -55,3 +55,27 @@ def test_create_post():
     assert data["body"] == "Practising POST requests using Python"
     assert data["userId"] == 1
     assert "id" in data
+
+def test_update_post():
+    response = update_post(
+        1,
+        "Updated title",
+        "Updated body",
+        1
+    )
+
+    data = response.json()
+
+    assert response.status_code == 200
+    assert data["id"] == 1
+    assert data["title"] == "Updated title"
+    assert data["body"] == "Updated body"
+
+
+def test_patch_post():
+    response = patch_post(1, "Partially updated title")
+
+    data = response.json()
+
+    assert response.status_code == 200
+    assert data["title"] == "Partially updated title"
