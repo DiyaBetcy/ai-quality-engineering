@@ -53,3 +53,79 @@
 - Learned HTTP 401 and HTTP 500 responses.
 - Practised handling timeout and connection exceptions.
 - Used try-except for API error handling.
+
+
+# Day 6 - Playwright Web Automation
+
+## Objective
+Learn browser automation using Playwright with Python and Pytest.
+
+## Topics Covered
+
+- Browser automation using Chromium
+- Navigating webpages
+- Locating elements using Playwright locators
+- Filling text fields and clicking buttons
+- Dropdown selection
+- Checkbox and radio button interactions
+- Assertions using Playwright expect()
+- Handling iframes
+- Page Object Model (POM)
+
+## Project Structure
+
+playwright/
+├── app/
+│   └── login.html
+├── pages/
+│   └── login_page.py
+├── tests/
+│   ├── test_homepage.py
+│   ├── test_inputs.py
+│   ├── test_dropdown.py
+│   ├── test_checkboxes.py
+│   ├── test_radio.py
+│   └── test_login.py
+└── README.md
+
+## Page Object Model
+
+Implemented a LoginPage class to separate webpage
+locators and actions from test scenarios.
+
+The page object contains:
+- Username locator
+- Password locator
+- Login button locator
+- Login message locator
+- open() method
+- login() method
+
+## Login Test Scenarios
+
+| Test Case | Expected Result |
+|---|---|
+| Valid username and password | Login successful |
+| Valid username and invalid password | Invalid credentials message |
+
+Practice credentials:
+- Username: admin
+- Password: 12345
+
+Note: The local login application is a frontend-only
+practice application.
+
+## Execution
+
+Run all Playwright tests:
+
+python -m pytest playwright/tests/ -v
+
+Run login tests in headed mode:
+
+python -m pytest playwright/tests/test_login.py -v --headed
+
+## Key Learning
+
+Page Object Model improves maintainability by
+separating page interactions from test logic.
