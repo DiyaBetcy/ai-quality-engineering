@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Elements Practice</title>
+</head>
+<body>
+
+    <h2>Dynamic Content Testing</h2>
+
+    <button id="load-button">Load Message</button>
+
+    <p id="message" style="display: none;">
+        Content loaded successfully!
+    </p>
+
+    <script>
+        document.getElementById("load-button")
+            .addEventListener("click", function() {
+
+                setTimeout(function() {
+                    document.getElementById("message")
+                        .style.display = "block";
+                }, 3000);
+
+            });
+    </script>
+
+</body>
+</html>
