@@ -35,3 +35,26 @@ def test_invalid_login(page):
     expect(page).to_have_url(
         "https://the-internet.herokuapp.com/login"
     )
+
+def test_login_button_by_role(page):
+    page.goto("https://the-internet.herokuapp.com/login")
+
+    button = page.get_by_role("button", name="Login")
+
+    expect(button).to_be_visible()
+
+
+def test_login_button_by_text(page):
+    page.goto("https://the-internet.herokuapp.com/login")
+
+    button = page.get_by_text("Login", exact=True)
+
+    expect(button).to_be_visible()
+
+
+def test_login_button_by_css_class(page):
+    page.goto("https://the-internet.herokuapp.com/login")
+
+    button = page.locator(".radius")
+
+    expect(button).to_be_visible()
