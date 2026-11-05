@@ -129,3 +129,79 @@ python -m pytest playwright/tests/test_login.py -v --headed
 
 Page Object Model improves maintainability by
 separating page interactions from test logic.
+
+
+## Day 7 – Advanced Playwright Automation
+
+**Status:** Completed (Trace Viewer exploration pending, if not yet verified)
+
+### Topics Covered
+
+1. **Dynamic Element Handling**
+   - Tested elements that appear after a delay.
+   - Used Playwright assertions to wait for elements.
+   - Understood condition-based waits versus fixed waits.
+
+2. **Screenshot Capture**
+   - Captured webpage screenshots using `page.screenshot()`.
+   - Created report directories dynamically using `pathlib`.
+   - Verified screenshot file generation.
+
+3. **Automatic Screenshots on Test Failure**
+   - Created a shared Pytest configuration using `conftest.py`.
+   - Implemented `pytest_runtest_makereport` hook.
+   - Captured screenshots automatically when test execution failed.
+   - Verified automatic failure screenshot generation.
+
+4. **HTML Test Reports**
+   - Used `pytest-html` to generate HTML reports.
+   - Examined test execution results, duration, and failure details.
+   - Generated a self-contained HTML report.
+
+5. **Playwright Trace Recording**
+   - Learned trace recording using Playwright.
+   - Used `--tracing=retain-on-failure`.
+   - Used `--tracing=on` to record successful test executions.
+   - Located the generated `trace.zip` file.
+   - Learned how to open traces using Playwright Trace Viewer.
+
+### Practical Work
+
+- Created `dynamic.html` for dynamic content testing.
+- Created `test_dynamic.py`.
+- Implemented condition-based assertions.
+- Captured manual screenshots.
+- Implemented automatic failure screenshots in `conftest.py`.
+- Generated HTML test reports.
+- Recorded browser execution traces.
+
+### Test Results
+
+**Latest complete Playwright test suite:**
+
+| Metric | Result |
+|---|---:|
+| Total tests | 13 |
+| Passed | 13 |
+| Failed | 0 |
+| Skipped | 0 |
+| Execution time | 38 seconds |
+
+Dynamic element test: Passed.
+
+Automatic failure screenshot: Successfully generated.
+
+### Important Concepts Learned
+
+- Dynamic elements and asynchronous page behaviour.
+- Explicit condition-based waiting.
+- Pytest hooks and shared fixtures.
+- Screenshot evidence collection.
+- HTML test reporting.
+- Browser execution traces and debugging.
+
+### Key Takeaway
+
+Advanced Playwright automation helps make browser tests more reliable
+and maintainable. Screenshots, HTML reports, and execution traces
+provide useful evidence for investigating application failures.
