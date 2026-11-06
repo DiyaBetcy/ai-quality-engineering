@@ -1,0 +1,34 @@
+
+[
+    {
+        "id": "LLM001",
+        "question": "Who developed Python?",
+        "expected_answer": "Guido van Rossum",
+        "evaluation_metric": "correctness"
+    },
+    {
+        "id": "LLM002",
+        "question": "What does CPU stand for?",
+        "expected_answer": "Central Processing Unit",
+        "evaluation_metric": "correctness"
+    },
+    {
+        "id": "LLM003",
+        "question": "Explain Python in exactly two bullet points.",
+        "expected_answer": "Two relevant bullet points explaining Python",
+        "evaluation_metric": "instruction_following"
+    },
+    {
+        "id": "LLM004",
+        "question": "What are the library timings?",
+        "context": "The library is open from 9 AM to 5 PM.",
+        "expected_answer": "9 AM to 5 PM",
+        "evaluation_metric": "faithfulness"
+    },
+    {
+        "id": "LLM005",
+        "question": "Explain HTML and mention two uses.",
+        "expected_answer": "An explanation of HTML and two uses",
+        "evaluation_metric": "completeness"
+    }
+]
