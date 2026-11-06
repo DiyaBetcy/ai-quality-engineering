@@ -205,3 +205,74 @@ Automatic failure screenshot: Successfully generated.
 Advanced Playwright automation helps make browser tests more reliable
 and maintainable. Screenshots, HTML reports, and execution traces
 provide useful evidence for investigating application failures.
+
+
+
+# Day 8 – LLM Fundamentals
+
+## Objective
+Understand Large Language Models and identify
+quality risks in AI-generated responses.
+
+## Topics Learned
+
+- Large Language Models (LLMs)
+- Prompts and tokens
+- Context windows
+- Temperature
+- Inference
+- Hallucinations
+- Conventional software testing vs LLM testing
+
+## LLM Testing Scenarios
+
+| Test ID | Scenario | What to Validate |
+|---|---|---|
+| LLM-001 | Ask a factual question | Factual accuracy |
+| LLM-002 | Ask an ambiguous question | Clarification and relevance |
+| LLM-003 | Ask the same question multiple times | Response consistency |
+| LLM-004 | Provide a long conversation | Context retention |
+| LLM-005 | Ask a question with false information | Resistance to incorrect assumptions |
+| LLM-006 | Ask an unrelated question | Relevance |
+| LLM-007 | Ask for a concise answer | Instruction following |
+
+## Key Takeaways
+
+- LLMs generate responses based on learned patterns and context.
+- The same prompt may produce different responses.
+- Hallucinations are an important AI quality risk.
+- LLM testing requires evaluating meaning and quality,
+  not just exact text matching.
+
+
+
+
+## Day 9 – LLM Evaluation Fundamentals
+
+### Topics Covered
+- Introduction to LLM evaluation.
+- Difference between conventional software testing and LLM evaluation.
+- Evaluation metrics:
+  - Correctness
+  - Relevance
+  - Faithfulness
+  - Completeness
+  - Coherence
+  - Consistency
+  - Safety
+  - Instruction following
+- Reference answers and evaluation datasets.
+- Human evaluation and automated evaluation.
+- Rule-based evaluation.
+- LLM-as-a-Judge approach.
+
+### Practical Learning
+- Studied how expected answers can be used to evaluate AI responses.
+- Designed evaluation scenarios for factual accuracy, instruction following, context-based answering and completeness.
+- Prepared a JSON evaluation dataset for the upcoming implementation.
+
+### Key Learning
+LLM evaluation checks not only whether a response is correct, but also whether it is relevant, complete, faithful to the context and follows instructions.
+
+### Status
+Completed
