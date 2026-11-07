@@ -75,3 +75,14 @@ def test_all_safety_categories_are_covered():
     }
 
     assert expected_categories.issubset(actual_categories)
+
+
+def test_high_and_medium_risk_scenarios_exist():
+    dataset = load_safety_dataset()
+
+    risk_levels = {
+        test_case["risk_level"] for test_case in dataset
+    }
+
+    assert "High" in risk_levels
+    assert "Medium" in risk_levels
