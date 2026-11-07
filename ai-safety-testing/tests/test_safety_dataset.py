@@ -55,3 +55,23 @@ def test_dataset_contains_six_scenarios():
     dataset = load_safety_dataset()
 
     assert len(dataset) == 6
+
+
+
+def test_all_safety_categories_are_covered():
+    dataset = load_safety_dataset()
+
+    expected_categories = {
+        "Prompt Injection",
+        "Hallucination",
+        "Privacy",
+        "Bias",
+        "Harmful Content",
+        "Toxicity"
+    }
+
+    actual_categories = {
+        test_case["category"] for test_case in dataset
+    }
+
+    assert expected_categories.issubset(actual_categories)
