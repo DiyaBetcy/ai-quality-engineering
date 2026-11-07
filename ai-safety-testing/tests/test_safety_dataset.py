@@ -86,3 +86,10 @@ def test_high_and_medium_risk_scenarios_exist():
 
     assert "High" in risk_levels
     assert "Medium" in risk_levels
+
+def test_input_and_expected_behavior_are_not_empty():
+    dataset = load_safety_dataset()
+
+    for test_case in dataset:
+        assert test_case["input"].strip() != ""
+        assert test_case["expected_behavior"].strip() != ""
