@@ -1,4 +1,3 @@
-
 # AI Quality Engineering – Learning Progress Tracker
 
 ## Learning Plan
@@ -25,7 +24,7 @@
 | Day 8 | LLM Fundamentals | Completed |
 | Day 9 | LLM Evaluation Fundamentals | Completed |
 | Day 10 | Building a Rule-Based LLM Evaluation Framework | Completed |
-| Day 11 | DeepEval and AI Safety Testing | Pending |
+| Day 11 | DeepEval and AI Safety Testing | Partially Completed |
 | Day 12 | Mobile Automation with Appium | Pending |
 | Day 13 | Mini Project – AI Quality Engineering | Pending |
 | Day 14 | Mock Interview and Final Review | Pending |
@@ -35,6 +34,7 @@
 ## Learning Areas
 
 ### 1. Python Automation and Pytest
+
 - [x] Python functions and conditions
 - [x] Assertions
 - [x] Pytest installation and execution
@@ -47,6 +47,7 @@
 - [x] HTML test reporting
 
 ### 2. API Testing
+
 - [x] API fundamentals
 - [x] HTTP methods
 - [x] HTTP status codes
@@ -59,6 +60,7 @@
 - [x] API automation using Python Requests and Pytest
 
 ### 3. Web Automation with Playwright
+
 - [x] Playwright installation and browser setup
 - [x] Browser navigation
 - [x] Locators and CSS selectors
@@ -74,6 +76,7 @@
 - [x] Trace recording
 
 ### 4. LLM Fundamentals
+
 - [x] Introduction to Large Language Models
 - [x] Prompts and prompting techniques
 - [x] Tokens and tokenization
@@ -84,6 +87,7 @@
 - [x] Conventional software testing vs LLM testing
 
 ### 5. LLM Evaluation
+
 - [x] LLM evaluation fundamentals
 - [x] Correctness
 - [x] Relevance
@@ -101,52 +105,41 @@
 - [x] HTML evaluation report generation
 
 ### 6. DeepEval and AI Safety Testing
-- [ ] DeepEval fundamentals
+
+**AI Safety Testing – Theory and Offline Work**
+
+- [x] Introduction to AI Safety Testing
+- [x] Prompt Injection and Jailbreaking concepts
+- [x] Hallucination, privacy and data leakage concepts
+- [x] Bias, harmful content and toxicity concepts
+- [x] Risk-based AI safety testing
+- [x] Manual vs automated AI safety testing
+- [x] Safety test scenario and dataset creation
+- [x] JSON dataset validation
+- [x] Pytest-based dataset validation (8 tests passed)
+- [x] Test scenario, test case, execution and report concepts
+
+**DeepEval and Model-Based Evaluation – Pending**
+
+- [x] DeepEval package installation
+- [ ] DeepEval fundamentals and configuration
+- [ ] Local model setup using Ollama
 - [ ] LLM evaluation using DeepEval
 - [ ] Hallucination evaluation
 - [ ] Faithfulness evaluation
-- [ ] AI safety testing
-- [ ] Prompt injection testing
-- [ ] Harmful-content evaluation
+- [ ] Actual prompt injection testing
+- [ ] Actual harmful-content evaluation
+- [ ] AI safety evaluation against a language model
 
 ### 7. Mobile Automation
+
 - [ ] Appium fundamentals
 - [ ] Android automation setup
 - [ ] Mobile application interactions
 - [ ] Mobile test execution
 
 ### 8. Mini Project and Interview Preparation
+
 - [ ] Build an AI Quality Engineering mini project
 - [ ] Organize test datasets and test cases
-- [ ] Generate evaluation reports
-- [ ] Document project architecture
-- [ ] Prepare technical interview questions
-- [ ] Complete mock interview
-
----
-
-## GitHub Project
-
-Repository: https://github.com/DiyaBetcy/ai-quality-engineering
-
-Main project directories:
-
-- `python-automation/`
-- `api-testing/`
-- `playwright/`
-- `llm-evaluation/`
-- `ai-safety-testing/`
-- `appium/`
-- `notes/`
-- `learning-tracker/`
-- `reports/`
-
----
-
-## Progress Update Guidelines
-
-- Update this file whenever a day's learning activities are completed.
-- Use `daily-log.md` for chronological daily activity details.
-- Use topic-level README files for consolidated technical notes.
-- Keep practical code, test cases and reports in their respective project directories.
-- Update pending items only after completing and verifying the corresponding activities.
+-
