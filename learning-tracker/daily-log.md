@@ -470,3 +470,49 @@ llm-evaluation/
 | HTML report | Generated and verified |
 
 **Day 10 Status: COMPLETED**
+
+
+## Day 11 – AI Safety Testing
+**Date:** 08 November 2026
+
+### Topics Studied
+- Introduction to AI Safety Testing.
+- Prompt Injection and Jailbreaking.
+- Hallucination and factual reliability.
+- Privacy and data leakage.
+- Bias, harmful content, and toxicity.
+- Risk-based AI safety testing.
+- Test scenario vs test case vs test execution vs test report.
+- Manual vs automated AI safety testing.
+- Limitations of rule-based evaluation.
+
+### Practical Work Completed Earlier
+- Created six AI safety test scenarios.
+- Created a JSON safety test dataset.
+- Validated JSON syntax.
+- Implemented Python dataset loading.
+- Created Pytest validation checks.
+- Verified required fields, unique IDs, risk levels, category coverage, and non-empty inputs and expected behaviours.
+
+### Test Execution Summary
+- Total dataset validation tests: 8
+- Passed: 8
+- Failed: 0
+
+### Documentation
+- Prepared AI Safety Testing technical notes.
+- Prepared a manual safety evaluation report.
+- Documented the difference between test scenarios, test cases, execution, and reporting.
+
+### Pending Work
+- Ollama installation.
+- Local language model configuration.
+- DeepEval integration.
+- Actual AI response evaluation.
+- Execution of safety scenarios against a language model.
+
+### Key Learning
+Validating a safety test dataset does not prove that an AI model is safe. Actual model responses must be evaluated against expected behaviour.
+
+### Day Status
+Partially Completed – theory and offline dataset validation completed; model-based evaluation pending.
